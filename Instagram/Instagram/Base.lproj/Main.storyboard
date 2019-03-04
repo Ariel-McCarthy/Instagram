@@ -118,7 +118,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="279" id="e3o-MR-pqQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="279" id="e3o-MR-pqQ" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="279"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e3o-MR-pqQ" id="hLo-B0-w3Y">
@@ -154,6 +154,11 @@
                                                 <constraint firstItem="PUp-kG-1Fg" firstAttribute="top" secondItem="Vgz-3t-jMJ" secondAttribute="bottom" id="y6a-w2-jyi"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="PUp-kG-1Fg" id="PmZ-8o-OuH"/>
+                                            <outlet property="photoView" destination="Vgz-3t-jMJ" id="8WQ-gp-pYc"/>
+                                            <outlet property="usernameLabel" destination="WAA-R2-AS8" id="ZDI-g4-M0Y"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -168,6 +173,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="EgC-lj-zgi" id="hzQ-YX-YSe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGI-8m-ZqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
