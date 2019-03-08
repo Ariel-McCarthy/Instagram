@@ -79,7 +79,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String)
     {
-        // Cretae the comment
+        // Create the comment
         
         commentBar.inputTextView.text = nil
         showsCommentBar = false
