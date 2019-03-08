@@ -8,11 +8,13 @@
 import UIKit
 import Parse
 import AlamofireImage
+import MessageInputBar
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     @IBOutlet weak var tableView: UITableView!
     
+    let commentBar = MessageInputBar()
     var posts = [PFObject]()
     let refreshContol = UIRefreshControl()
     
@@ -26,6 +28,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // refresh definition
         refreshContol.addTarget(self, action: #selector(viewDidAppear), for: .valueChanged)
         tableView.refreshControl = refreshContol
+    }
+    
+    override var inputAccessoryView: UIView?
+    {
+        return commentBar
+    }
+    
+    override var canBecomeFirstResponder: Bool
+    {
+        return true
     }
     
     override func viewDidAppear(_ animated: Bool)
