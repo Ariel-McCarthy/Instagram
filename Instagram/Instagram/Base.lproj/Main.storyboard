@@ -108,17 +108,16 @@
         <!--Feed View Controller-->
         <scene sceneID="dOq-23-SRT">
             <objects>
-                <viewController id="tt6-74-FSI" customClass="FeedViewController" sceneMemberID="viewController">
+                <viewController id="tt6-74-FSI" customClass="FeedViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lgx-YQ-M6Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EgC-lj-zgi">
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EgC-lj-zgi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="279" id="e3o-MR-pqQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="279" id="e3o-MR-pqQ" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="279"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e3o-MR-pqQ" id="hLo-B0-w3Y">
@@ -138,14 +137,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vgz-3t-jMJ">
-                                                    <rect key="frame" x="0.0" y="20.5" width="375" height="237.5"/>
+                                                    <rect key="frame" x="16" y="20.5" width="343" height="237.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Vgz-3t-jMJ" firstAttribute="leading" secondItem="hLo-B0-w3Y" secondAttribute="leading" id="8Xi-OR-Cph"/>
+                                                <constraint firstItem="Vgz-3t-jMJ" firstAttribute="leading" secondItem="hLo-B0-w3Y" secondAttribute="leading" constant="16" id="8Xi-OR-Cph"/>
                                                 <constraint firstAttribute="trailing" secondItem="PUp-kG-1Fg" secondAttribute="trailing" constant="16" id="9Dv-y0-0Z9"/>
                                                 <constraint firstAttribute="bottom" secondItem="PUp-kG-1Fg" secondAttribute="bottom" id="9OD-ae-qgk"/>
-                                                <constraint firstAttribute="trailing" secondItem="Vgz-3t-jMJ" secondAttribute="trailing" id="BuU-gI-PEQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Vgz-3t-jMJ" secondAttribute="trailing" constant="16" id="BuU-gI-PEQ"/>
                                                 <constraint firstItem="WAA-R2-AS8" firstAttribute="leading" secondItem="hLo-B0-w3Y" secondAttribute="leading" constant="16" id="ROT-c2-Xh1"/>
                                                 <constraint firstItem="WAA-R2-AS8" firstAttribute="top" secondItem="hLo-B0-w3Y" secondAttribute="top" id="a1d-GB-xmS"/>
                                                 <constraint firstAttribute="trailing" secondItem="WAA-R2-AS8" secondAttribute="trailing" constant="16" id="emV-B2-u3g"/>
@@ -154,11 +153,22 @@
                                                 <constraint firstItem="PUp-kG-1Fg" firstAttribute="top" secondItem="Vgz-3t-jMJ" secondAttribute="bottom" id="y6a-w2-jyi"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="PUp-kG-1Fg" id="PmZ-8o-OuH"/>
+                                            <outlet property="photoView" destination="Vgz-3t-jMJ" id="8WQ-gp-pYc"/>
+                                            <outlet property="usernameLabel" destination="WAA-R2-AS8" id="ZDI-g4-M0Y"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EgC-lj-zgi" firstAttribute="leading" secondItem="rgT-2F-Dtm" secondAttribute="leading" id="8I3-NG-TFl"/>
+                            <constraint firstItem="EgC-lj-zgi" firstAttribute="bottom" secondItem="rgT-2F-Dtm" secondAttribute="bottom" id="EVb-0K-lUw"/>
+                            <constraint firstItem="EgC-lj-zgi" firstAttribute="top" secondItem="lgx-YQ-M6Q" secondAttribute="top" id="cUn-qY-g8H"/>
+                            <constraint firstItem="EgC-lj-zgi" firstAttribute="trailing" secondItem="rgT-2F-Dtm" secondAttribute="trailing" id="gnS-Gx-hkP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rgT-2F-Dtm"/>
                     </view>
                     <navigationItem key="navigationItem" id="RHy-fZ-Jtf">
@@ -168,10 +178,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="EgC-lj-zgi" id="HcU-jU-DVA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGI-8m-ZqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2023.2" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2021.5999999999999" y="132.68365817091455"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="qi4-3q-vIo">
