@@ -13,15 +13,15 @@ The following **required** functionality is completed:
 - [X] User can sign up to create a new account. (1pt)
 - [X] User can log in. (1pt)
 - [X] User can take a photo, add a caption, and post it to the server. (3pt)
-- [ ] User can view the last 20 posts. (4pts)
+- [X] User can view the last 20 posts. (4pts)
 
 The following **bonus** features are implemented:
 
-- [ ] User can pull to refresh. (1pt)
+- [X] User can pull to refresh. (1pt)
 - [ ] User can load past feed infinitely. (2pts)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/7GAsZ3W90Q.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
