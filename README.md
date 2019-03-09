@@ -22,7 +22,7 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/W01jbYhHd4.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Parstagram - Part I
@@ -30,7 +30,7 @@ Here's a walkthrough of implemented user stories:
 This is an Instagram clone with a custom Parse backend that allows a user to post photos and view a global photos feed.
 
 Time spent: **22** hours spent in total
-( I tried to get help, but no one was able to figure out the problem I was having.)
+( I tried to get help, but no one was able to figure out the problem I was having. --update, the problem was just Xcode is buggy.)
 
 ## User Stories
 
